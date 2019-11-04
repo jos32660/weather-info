@@ -1,0 +1,25 @@
+{
+  "name": "15.weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jos32660/weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jos32660/weather/issues"
+  },
+  "homepage": "https://github.com/jos32660/weather#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "underscore": "^1.9.1"
+  }
+}

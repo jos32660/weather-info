@@ -1,0 +1,27 @@
+{
+	"cities": [{
+		"name": "Seoul",
+		"id": 1835848
+	}, {
+		"name": "Incheon",
+		"id": 1843564
+	}, {
+		"name": "Busan",
+		"id": 1838722
+	}, {
+		"name": "Daejeon",
+		"id": 1835235
+	}, {
+		"name": "Daegu",
+		"id": 1835329
+	}, {
+		"name": "Jeju",
+		"id": 1846266
+	}, {
+		"name": "Gwangju",
+		"id": 1841810
+	}, {
+		"name": "Mokpo",
+		"id": 1841066
+	}]
+}
