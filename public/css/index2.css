@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:400,700&display=swap');
+
+.main-wrap {width: 375px; height: 812px; max-width: 100%; max-height: 100%; margin: 4rem auto;}
+.main {width:100%; height: 100%; background-color: #fdfdfd; overflow: hidden; position: relative;}
+.cloud {position: absolute; z-index: 2; top:2rem; left:-10%; animation-iteration-count: infinite; animation-name: cloud; animation-duration: 30s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.cloud2 {position: absolute; z-index: 0; opacity: 0.8; top:10rem; left:-30%; animation-iteration-count: infinite; animation-name: cloud2; animation-duration: 20s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.cloud3 {position: absolute; z-index: 0; opacity: 0.8; top:30rem; left:-40%; animation-iteration-count: infinite; animation-name: cloud3; animation-duration: 20s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.main-tit{position: relative; margin:15rem auto 2rem; color:#2b4264; text-align: center; font-family: 'Hind Siliguri', sans-serif; font-weight: bold;}
+#cities {width:70%; margin: 0 auto;}
+
+@keyframes cloud {
+	0% {left:-10%;}
+	33.33% {left: 20%;}
+	66.66% {left: 60%;}
+	100% {left:100%;}
+}
+
+@keyframes cloud2 {
+	0% {left:-30%;}
+	33.33% {left: 10%;}
+	66.66% {left: 40%;}
+	100% {left:100%;}
+}
+
+@keyframes cloud3 {
+	0% {left:-40%;}
+	33.33% {left: 20%;}
+	66.66% {left: 60%;}
+	100% {left:100%;}
+}
