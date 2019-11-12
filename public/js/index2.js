@@ -8,6 +8,9 @@ var dailyURL = dailyAPI + '?appid=' + key + "&units=" + units;
 var weeklyURL = weeklyAPI + '?appid=' + key + "&units=" + units;
 
 
+var n = Math.floor(Math.random()*2);
+$(".weather").eq(n).css("display","block");
+
 init();
 
 function init() {
@@ -116,33 +119,68 @@ function cityFn() {
 function dailyFn(){
 	if(this.readyState == 4 && this.status == 200){
 		let res = JSON.parse(this.responseText);
-		var wts = new Date(new Date(v.dt_txt).getTime() + (9*60*60*1000));
+		var wts = new Date();
+		console.log(res);
 		let iconSrc = `../img/icon/${res.weather[0].icon}.png`;
-		let desc = `<b>${res.weather[0].main}</b> `;
-		let temp = `| &nbsp;&nbsp;&nbsp;&nbsp;<b>${res.main.temp}</b>˚C`;
-		let time = `<span>${dspDate(wts, 5)}</span>`;
+		let desc = `<b>${res.weather[0].main}</b>`;
+		let temp = `<b>${res.main.temp}</b>˚C`;
+		let hum = `<span>${res.main.humidity}%</span>`;
+		let humTit ='<span>Humidity</span>';
+		let wind = `<span>${res.wind.speed}km/h</span>`;
+		let windTit ='<span>Wind</span>';
+		let time = `<span>${dspDate(wts, 5)}</span> &nbsp; <span>${dspDate(wts, 6)}</span>`;
 		let _wrap = document.querySelector(".daily").querySelector(".conts");
 		let _title = document.createElement("div");
-		let _img = document.createElement("div");
-		let _temp = document.createElement("span");
-		let _desc = document.createElement("span");
 		let _time = document.createElement("div");
-		_title.innerHTML = 'Today weather';
+		let _img = document.createElement("div");
+		let _sub = document.createElement("div");
+		let _temp = document.createElement("div");
+		let _desc = document.createElement("div");
+		let _subs = document.createElement("div");
+		let _sub2 = document.createElement("div");
+		let _hum = document.createElement("div");
+		let _humTit = document.createElement("div");
+		let _sub3 = document.createElement("div");
+		let _wind = document.createElement("div");
+		let _windTit = document.createElement("div");
+		_title.innerHTML = `${res.name}`;
+		_time.innerHTML = time;
 		_img.innerHTML = `<img src="${iconSrc}" class="w-100 daily-img">`;
 		_temp.innerHTML = temp;
 		_desc.innerHTML = desc;
-		_time.innerHTML = time;
-		_title.setAttribute("class","text-center py-3 fa-3x w-tit");
+		_hum.innerHTML = hum;
+		_humTit.innerHTML = humTit;
+		_wind.innerHTML = wind;
+		_windTit.innerHTML = windTit;
+		_title.setAttribute("class","text-left py-1 px-3 fa-3x w-tit");
+		_time.setAttribute("class","daily-time");
 		_img.setAttribute("class","text-center py-3");
-		_desc.setAttribute("class","text-center py-3 d-inline-block f-2");
-		_temp.setAttribute("class","text-center py-3 d-inline-block f-2");
-		_time.setAttribute("class","text-center py-3 d-inline-block f-2");
+		_sub.setAttribute("class","daily-sub text-center");
+		_desc.setAttribute("class","py-3 daily-d");
+		_temp.setAttribute("class","py-1 daily-t");
+		_subs.setAttribute("class","d-flex");
+		_sub2.setAttribute("class","m-auto text-center");
+		_hum.setAttribute("class","text-center py-3 px-2 d-inline-block f-2");
+		_humTit.setAttribute("class","f-1 color-s");
+		_sub3.setAttribute("class","m-auto text-center");
+		_wind.setAttribute("class","text-center py-3 px-2 d-inline-block f-2");
+		_windTit.setAttribute("class","f-1 color-s");
 		_wrap.innerHTML = '';
 		_wrap.appendChild(_title);
-		_wrap.appendChild(_img);
-		_wrap.appendChild(_desc);
-		_wrap.appendChild(_temp);
 		_wrap.appendChild(_time);
+		_wrap.appendChild(_img);
+		_wrap.appendChild(_sub);
+		_sub.appendChild(_desc);
+		_sub.appendChild(_temp);
+		_wrap.appendChild(_subs);
+		_subs.appendChild(_sub2);
+		_sub2.appendChild(_hum);
+		_sub2.appendChild(_humTit);
+		_subs.appendChild(_sub3);
+		_sub3.appendChild(_wind);
+		_sub3.appendChild(_windTit);
+		// _wrap.appendChild(_desc);
+		// _wrap.appendChild(_temp);
 		wrapChg("D");
 	}
 }
@@ -152,25 +190,25 @@ function weeklyFn(){
 	if (this.readyState == 4 && this.status == 200) {
 		let res = JSON.parse(this.responseText);
 		var kts;
-	  var html = '';
-	  var _conts = document.querySelector(".weekly > .conts");
-	  _conts.innerHTML = '';
-	 for(var v of res.list){
+	  	var html = '';
+	 	 var _conts = document.querySelector(".weekly > .conts");
+	  	_conts.innerHTML = '';
+	 	for(var v of res.list){
 		kts = new Date(new Date(v.dt_txt).getTime() + (9*60*60*1000));
 		html = `
-	 <li class="w-item">
+	 	<li class="w-item">
 		<div>
 		<img src="../img/icon/${v.weather[0].icon}.png" alt="" class="w-100">
 		</div>
-		<ul>
+		<ul class="ml-5">
 		<li class="w-temp"><span>${v.main.temp}</span>˚C</li>
 		<li class="w-desc">
 		<span>${v.weather[0].main}</span>
 		<span>${v.weather[0].description}</span>
 		</li>
-		<li class="w-date">${dspDate(kts, 2)}forecast</li>
+		<li class="w-date">${dspDate(kts, 2)}</li>
 		</ul>
-	 </li>`;
+	 	</li>`;
 		_conts.innerHTML += html;
 	 }
 	}

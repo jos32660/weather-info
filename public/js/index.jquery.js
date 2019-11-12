@@ -108,7 +108,7 @@ function weeklyFn(res){
 	for(var v of res.list){
 		kts = new Date(new Date(v.dt_txt).getTime() + (9*60*60*1000));
 		html = `
-	 <li class="w-item">
+	 	<li class="w-item">
 		<div>
 		<img src="../img/icon/${v.weather[0].icon}.png" alt="" class="w-100">
 		</div>
@@ -120,7 +120,7 @@ function weeklyFn(res){
 		</li>
 		<li class="w-date">${dspDate(kts, 2).substring()}</li>
 		</ul>
-	 </li>
+	 	</li>
 		`;
 		$w.append(html);
 	}
