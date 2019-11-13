@@ -158,7 +158,7 @@ function dailyFn(){
 		_sub.setAttribute("class","daily-sub text-center");
 		_desc.setAttribute("class","py-3 daily-d");
 		_temp.setAttribute("class","py-1 daily-t");
-		_subs.setAttribute("class","d-flex");
+		_subs.setAttribute("class","d-flex daily-sub2");
 		_sub2.setAttribute("class","m-auto text-center");
 		_hum.setAttribute("class","text-center py-3 px-2 d-inline-block f-2");
 		_humTit.setAttribute("class","f-1 color-s");

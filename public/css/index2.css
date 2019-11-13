@@ -37,10 +37,11 @@
 .daily .daily-time {display: flex; justify-content: flex-start; align-items: center; padding: 0.2rem 0.9rem; font-size: 0.8rem; color: #5f5f5f;}
 .daily .daily-img {width: 80%; height: 100%; max-width: 80%; max-height: 100%; padding: 1rem 0;}
 .daily .daily-sub {margin: 0 1rem;}
+.daily .daily-sub2 {padding-top: 4rem;}
 .daily .daily-d {text-align: center; font-size: 2.5rem;}
 .daily .daily-t {text-align: center; font-size: 2.2rem;}
 .weekly > .conts{display: flex;align-items: flex-start; align-content: flex-start; flex-wrap: wrap;}
-.w-item {display: flex; align-items: center; flex: 100% 0 0;  border-bottom: #222 1px solid; margin-top: 3rem; padding: 1rem 0.5rem;}
+.w-item {display: flex; align-items: center; flex: 100% 0 0;  border-bottom: #222 1px solid; padding: 2rem 0.5rem;}
 .w-item > div {flex: 0 0 25%; padding: 0.5rem;}
 .w-item > ul {flex: 0 0 75%;}
 .w-item > div > img {max-width: 150px;}
