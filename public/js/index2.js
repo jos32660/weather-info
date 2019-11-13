@@ -8,7 +8,7 @@ var dailyURL = dailyAPI + '?appid=' + key + "&units=" + units;
 var weeklyURL = weeklyAPI + '?appid=' + key + "&units=" + units;
 
 
-var n = Math.floor(Math.random()*2);
+var n = Math.floor(Math.random()*3);
 $(".weather").eq(n).css("display","block");
 
 init();
@@ -152,7 +152,7 @@ function dailyFn(){
 		_humTit.innerHTML = humTit;
 		_wind.innerHTML = wind;
 		_windTit.innerHTML = windTit;
-		_title.setAttribute("class","text-left py-1 px-3 fa-3x w-tit");
+		_title.setAttribute("class","text-left pt-5 pb-1 px-3 fa-3x w-tit");
 		_time.setAttribute("class","daily-time");
 		_img.setAttribute("class","text-center py-3");
 		_sub.setAttribute("class","daily-sub text-center");

@@ -2,37 +2,45 @@
 
 .color-s{color: #465c7e;}
 
-.main-wrap {width: 375px; height: 812px; max-width: 100%; max-height: 100%; margin: 4rem auto;}
+.main-wrap {width: 375px; height: 812px; max-width: 100%; max-height: 100%; margin: 0 auto; }
 .main {width:100%; height: 100%; background-color: #fcfcfc; overflow: hidden; position: relative;}
 .clouds {position: relative; display: none;}
 .cloud {position: absolute; z-index: 2; top:2rem; left:-10%; animation-iteration-count: infinite; animation-name: cloud; animation-duration: 30s; animation-timing-function: linear; animation-fill-mode: forwards;}
 .cloud2 {position: absolute; z-index: 0; opacity: 0.8; top:10rem; left:-30%; animation-iteration-count: infinite; animation-name: cloud2; animation-duration: 20s; animation-timing-function: linear; animation-fill-mode: forwards;}
 .cloud3 {position: absolute; z-index: 0; opacity: 0.8; top:30rem; left:-40%; animation-iteration-count: infinite; animation-name: cloud3; animation-duration: 20s; animation-timing-function: linear; animation-fill-mode: forwards;}
 .rains {display: none;}
-.rain {top:2rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain; animation-duration: 10s; animation-timing-function: linear; animation-fill-mode: forwards;}
-.rain2 {top: -4rem; left: 8rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain1; animation-duration: 8s; animation-timing-function: linear; animation-fill-mode: forwards;}
-.rain3 {top: 25rem; right: -2rem; animation-iteration-count: infinite; animation-name: rain2; animation-duration: 9s; animation-timing-function: linear; animation-fill-mode: forwards;}
-.rain4 {top: 40rem; left: 8rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain3; animation-duration: 6s; animation-timing-function: linear; animation-fill-mode: forwards;}
-.rain5 {top: 2rem; left: 20rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain4; animation-duration: 8s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain {top:2rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain; animation-duration:5s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain2 {top: -8rem; left: 8rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain1; animation-duration: 3s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain3 {top: 25rem; right: -2rem; animation-iteration-count: infinite; animation-name: rain2; animation-duration: 4s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain4 {top: 25rem; left: 8rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain3; animation-duration: 4s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain5 {top: 2rem; left: 27rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain4; animation-duration: 3s; animation-timing-function: linear; animation-fill-mode: forwards;}
 .rain6 {top: 20rem; right: 8rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain5; animation-duration: 5s; animation-timing-function: linear; animation-fill-mode: forwards;}
-.rain7 {top: 30rem; left: 10rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain6; animation-duration: 7s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.rain7 {top: 30rem; left: 10rem; transition: all 0.5s; animation-iteration-count: infinite; animation-name: rain6; animation-duration: 5s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.sunmoon {width: 100%; height: 100%; display: none;}
+.sun {position: absolute; width: 40%; transition: all 0.5s; animation-iteration-count: infinite; animation-name: sun; animation-duration:8s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.sun .suncolor{transition: all 0.5s; animation-iteration-count: infinite; animation-name: suncolor; animation-duration: 8s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.sun .suncolor2{transition: all 0.5s; animation-iteration-count: infinite; animation-name: suncolor2; animation-duration: 8s; animation-timing-function: linear; animation-fill-mode: forwards;}
+.hill {position: absolute; bottom: 3rem; margin: 0 auto; left: 0; right: 0; width: 100%;}
+.cls-1{fill:none;stroke-miterlimit:10;stroke-width:6px;stroke:url(#linear-gradient);}
+.st2{fill:none;stroke:url(#SVGID_1_);stroke-width:2;stroke-miterlimit:10;}
+.st3{fill:none;stroke:url(#SVGID_2_);stroke-width:2;stroke-miterlimit:10;}
 .main-tit{position: relative; margin:15rem auto 2rem; color:#2b4264; text-align: center; font-family: 'Hind Siliguri', sans-serif; font-weight: bold;}
 #cities {position: relative;  width:55%; margin: 0 auto; }
-.wrap {background-color: #ffffff; width: 375px; height: 812px; max-width: 100%; max-height: 100%; margin: 4rem auto; overflow:auto; font-family: 'Hind Siliguri', sans-serif;}
-.navi {height: 5rem; line-height: 5rem;}
+.wrap {background-color: #ffffff; width: 375px; height: 812px; max-width: 100%; max-height: 100%; margin: 1rem auto; overflow:auto; font-family: 'Hind Siliguri', sans-serif;}
+.navi {height: 2rem; line-height: 2rem; position: fixed; width: 375px; background: #fff; padding: 1.5rem 0; align-items: center;}
 .navi > li {flex: 33.3333% 1 0; cursor: pointer; transition: all 0.5s; color: #3c5479;}
 .navi > li:hover {color: #14243b;}
 .navi > .navi-sel {border-bottom: none;}
-.wrap > .conts {height: calc(100% - 5rem);}
+.wrap > .conts {height: calc(100% - 2rem);}
 .w-tit {font-weight: bold; font-size: 2rem;}
 .daily > .conts{padding: 1rem;}
 .daily .daily-time {display: flex; justify-content: flex-start; align-items: center; padding: 0.2rem 0.9rem; font-size: 0.8rem; color: #5f5f5f;}
-.daily .daily-img {width: 200px; height: 100%; max-width: 200px; max-height: 100%;}
+.daily .daily-img {width: 80%; height: 100%; max-width: 80%; max-height: 100%; padding: 1rem 0;}
 .daily .daily-sub {margin: 0 1rem;}
 .daily .daily-d {text-align: center; font-size: 2.5rem;}
 .daily .daily-t {text-align: center; font-size: 2.2rem;}
 .weekly > .conts{display: flex;align-items: flex-start; align-content: flex-start; flex-wrap: wrap;}
-.w-item {display: flex; align-items: center; flex: 100% 0 0;  border-bottom: #222 1px solid; padding: 1rem 0.5rem;}
+.w-item {display: flex; align-items: center; flex: 100% 0 0;  border-bottom: #222 1px solid; margin-top: 3rem; padding: 1rem 0.5rem;}
 .w-item > div {flex: 0 0 25%; padding: 0.5rem;}
 .w-item > ul {flex: 0 0 75%;}
 .w-item > div > img {max-width: 150px;}
@@ -62,44 +70,49 @@
 	100% {left:100%;}
 }
 @keyframes rain {
-	0% {transform: translateY(-50px) translateX(50px);}
-	33.33% {transform: translateY(20px) translateX(-20px);}
-	66.66% {transform: translateY(100px) translateX(-100px);}
+	0% {transform: translateY(-120px) translateX(120px);}
 	100% {transform: translateY(120px) translateX(-120px);}
 }
 @keyframes rain1 {
-	0% {transform: translateY(-80px) translateX(80px);}
-	33.33% {transform: translateY(100px) translateX(-100px);}
-	66.66% {transform: translateY(140px) translateX(-140px);}
-	100% {transform: translateY(200px) translateX(-200px);}
+	0% {transform: translateY(-300px) translateX(300px);}
+	100% {transform: translateY(300px) translateX(-300px);}
 }
 @keyframes rain2 {
 	0% {transform: translateY(-360px) translateX(360px);}
-	33.33% {transform: translateY(50px) translateX(-50px);}
-	66.66% {transform: translateY(70px) translateX(-70px);}
-	100% {transform: translateY(100px) translateX(-100px);}
+	100% {transform: translateY(360px) translateX(-360px);}
 }
 @keyframes rain3 {
 	0% {transform: translateY(-140px) translateX(140px);}
-	33.33% {transform: translateY(-60px) translateX(60px);}
-	66.66% {transform: translateY(80px) translateX(-80px);}
-	100% {transform: translateY(100px) translateX(-100px);}
+	100% {transform: translateY(140px) translateX(-140px);}
 }
 @keyframes rain4 {
-	0% {transform: translateY(-120px) translateX(120px);}
-	33.33% {transform: translateY(-100px) translateX(100px);}
-	66.66% {transform: translateY(100px) translateX(-100px);}
-	100% {transform: translateY(350px) translateX(-350px);}
+	0% {transform: translateY(-400px) translateX(400px);}
+	100% {transform: translateY(400px) translateX(-400px);}
 }
 @keyframes rain5 {
 	0% {transform: translateY(-110px) translateX(110px);}
-	33.33% {transform: translateY(-40px) translateX(40px);}
-	66.66% {transform: translateY(60px) translateX(-60px);}
-	100% {transform: translateY(100px) translateX(-100px);}
+	100% {transform: translateY(110px) translateX(-110px);}
 }
 @keyframes rain6 {
-	0% {transform: translateY(-150px) translateX(150px);}
-	33.33% {transform: translateY(70px) translateX(-70px);}
-	66.66% {transform: translateY(140px) translateX(-140px);}
+	0% {transform: translateY(-200px) translateX(200px);}
 	100% {transform: translateY(200px) translateX(-200px);}
+}
+
+@keyframes sun {
+	0% {transform: rotate(0); transform-origin: 100% 100%; top: 15%; left: -5%;}
+	100% {transform: rotate(200deg); transform-origin:100% 100%; top: 15%; left: 90%;}
+}
+
+@keyframes suncolor {
+	0% {stop-color: #ffdca2;}
+	33.3333% {stop-color: #ff90c8;}
+	66.6666% {stop-color: #2a6eff;}
+	100% {stop-color: #2a6eff;}
+}
+
+@keyframes suncolor2 {
+	0% {stop-color: #e74600;}
+	33.3333% {stop-color: #5e197e;}	
+	66.6666% {stop-color: #00013b;}	
+	100% {stop-color: #00013b;}	
 }
